@@ -20,14 +20,14 @@ const sinceLabel = START_DATE.toLocaleDateString('ru-RU', { day: '2-digit', mont
     <nav class="nav">
       <div class="brand">
         <span class="mark"></span>
-        <span class="word">нас двое</span>
+        <span class="word">арбуз</span>
       </div>
       <span class="since">с {{ sinceLabel }}</span>
     </nav>
 
     <main class="main">
       <section class="hero">
-        <ParticleText text="15-го я зафиналил" height="clamp(70px, 12vw, 150px)" />
+        <ParticleText text="15-го я не очканул зафиналить" height="clamp(70px, 12vw, 150px)" />
       </section>
 
       <LoveTimer />

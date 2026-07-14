@@ -62,7 +62,6 @@ const isPast = (dtStr) => new Date(dtStr) < new Date()
 
 <template>
   <section class="sched">
-    <p class="eyebrow">Планы</p>
     <ParticleText text="Когда ты свободна" height="clamp(46px, 8vw, 78px)" class="head" />
 
     <div class="form">
@@ -104,7 +103,7 @@ const isPast = (dtStr) => new Date(dtStr) < new Date()
       </li>
     </transition-group>
 
-    <p v-if="!items.length" class="empty body-copy">Пока пусто. Добавь первое свидание.</p>
+    <p v-if="!items.length" class="empty body-copy">ну дай шанс нерду бля пж</p>
   </section>
 </template>
 

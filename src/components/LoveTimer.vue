@@ -65,7 +65,6 @@ const cells = computed(() => [
 
 <template>
   <section class="timer">
-    <p class="eyebrow">Осталось до {{ targetLabel }}</p>
     <ParticleText :text="headText" height="clamp(46px, 8vw, 78px)" class="head" />
 
     <div class="grid">
