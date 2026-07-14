@@ -1,0 +1,123 @@
+:root {
+  /* Palette — Dala style reference */
+  --void: #000000;
+  --white: #ffffff;
+  --ash: #9a9a9a;
+  --silver: #bdbdbd;
+  --iris: #8052ff;
+  --saffron: #ffb829;
+  --verdant: #15846e;
+
+  /* Type */
+  --font: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  font-family: var(--font);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--void);
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'ss01' on;
+}
+
+/* Hierarchy through scale + tracking, never weight */
+.display {
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--saffron);
+}
+.body-copy {
+  font-weight: 200;
+  color: var(--silver);
+  line-height: 1.55;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Violet pill — the single primary action */
+.pill {
+  background: var(--iris);
+  color: var(--white);
+  border: none;
+  border-radius: 9999px;
+  padding: 15px 30px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.16s ease, background 0.16s ease;
+}
+.pill:hover {
+  transform: translateY(-2px);
+  background: #6f3dff;
+}
+
+/* Ghost text link */
+.ghost {
+  background: none;
+  border: none;
+  color: var(--ash);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.16s ease;
+}
+.ghost:hover {
+  color: var(--white);
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--iris);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
