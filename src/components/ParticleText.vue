@@ -15,7 +15,8 @@ let W = 0, H = 0
 const mouse = { x: -9999, y: -9999 }
 let ro
 
-const PALETTE = ['#ffffff', '#e7e2f7', '#8052ff', '#8052ff', '#b3a9d6', '#ffb829']
+// Для читаемости преобладает белый/светлый, акценты — фиолетовый и янтарь
+const PALETTE = ['#ffffff', '#ffffff', '#f1ecfd', '#f1ecfd', '#cdc2f0', '#a688ff', '#ffb829']
 
 function fitFontSize(octx, text, maxW, maxH) {
   let fs = maxH
@@ -52,7 +53,7 @@ async function build() {
   octx.fillText(props.text, 0, H / 2)
   const data = octx.getImageData(0, 0, W, H).data
 
-  const step = Math.max(3, Math.round(fs / 30))
+  const step = Math.max(3, Math.round(fs / 40))
   const next = []
   for (let y = 0; y < H; y += step) {
     for (let x = 0; x < W; x += step) {
@@ -63,7 +64,7 @@ async function build() {
           x: Math.random() * W,
           y: Math.random() * H,
           c: PALETTE[(Math.random() * PALETTE.length) | 0],
-          s: 1.3 + Math.random() * 1.6,
+          s: 1.7 + Math.random() * 1.7,
           ph: Math.random() * Math.PI * 2,
           rot: Math.random() * Math.PI,
         })
@@ -112,7 +113,7 @@ function frame() {
       p.y += (my / d) * f * 6
     }
 
-    const tw = 0.55 + 0.45 * Math.sin(t * 2.2 + p.ph)
+    const tw = 0.78 + 0.22 * Math.sin(t * 2.2 + p.ph)
     ctx.globalAlpha = tw
     ctx.fillStyle = p.c
     tri(p.x, p.y, p.s, p.rot)
